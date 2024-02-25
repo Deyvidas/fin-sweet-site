@@ -1,0 +1,44 @@
+{
+  "printWidth": 90,
+  "tabWidth": 4,
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+
+  "overrides": [
+    {
+      "files": "*.prettierrc",
+      "options": {
+        "tabWidth": 2
+      }
+    },
+
+    {
+      "files": "*.json",
+      "options": {
+        "tabWidth": 2,
+        "singleQuote": false
+      }
+    },
+    {
+      "files": "*.html",
+      "options": {
+        "printWidth": 9999,
+        "singleQuote": false
+      }
+    },
+    {
+      "files": "*.css",
+      "options": {
+        "printWidth": 9999,
+        "singleQuote": false
+      }
+    },
+    {
+      "files": "*.scss",
+      "options": {
+        "printWidth": 9999,
+        "singleQuote": false
+      }
+    }
+  ]
+}
