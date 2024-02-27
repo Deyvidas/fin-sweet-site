@@ -1,4 +1,4 @@
-- https://deyvidas.github.io/gulp-html-scss-build/
+- https://deyvidas.github.io/fin-sweet-site/
 
 <p align="center">~~~</p>
 
