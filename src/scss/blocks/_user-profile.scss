@@ -4,6 +4,10 @@
     column-gap: 14px;
     width: fit-content;
 
+    picture {
+        grid-row: 1 / 3;
+    }
+
     &__image {
         grid-row: 1 / 3;
         display: flex;
@@ -24,11 +28,13 @@
         font-size: 18px;
         font-weight: 500;
         line-height: calc(32 / 18);
+        white-space: nowrap;
     }
 
     &__user-role {
         font-size: 12px;
         font-weight: 500;
         line-height: calc(28 / 12);
+        white-space: nowrap;
     }
 }

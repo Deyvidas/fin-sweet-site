@@ -1,5 +1,6 @@
 .feedback-swiper {
     width: 100%;
+    min-width: 550px;
     z-index: 0;
 
     &__buttons {
@@ -23,6 +24,7 @@
 
         color: var(--color-white);
         background-color: var(--color-purple);
+        cursor: pointer;
 
         &--prev {
         }
@@ -33,6 +35,7 @@
         &--disabled {
             color: var(--color-blue-black-70);
             background-color: transparent;
+            cursor: default;
         }
     }
 }
