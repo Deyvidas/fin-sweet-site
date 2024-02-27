@@ -1,0 +1,38 @@
+[
+  {
+    "additionalClasses": "benefit-card--white-bg",
+    "iconId": "benefits__users",
+    "heading": "Uses Client First",
+    "paragraph": "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam sed faucib turpis eu gravida mi. Pellentesque et velit aliquam sed mi."
+  },
+  {
+    "additionalClasses": "benefit-card--white-bg",
+    "iconId": "benefits__check-mark",
+    "heading": "Two Free Revision Round",
+    "paragraph": "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam sed faucib turpis eu gravida mi. Pellentesque et velit aliquam sed mi."
+  },
+  {
+    "additionalClasses": "benefit-card--white-bg",
+    "iconId": "benefits__design-tools",
+    "heading": "Template Customization",
+    "paragraph": "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam sed faucib turpis eu gravida mi. Pellentesque et velit aliquam sed mi."
+  },
+  {
+    "additionalClasses": "benefit-card--white-bg",
+    "iconId": "benefits__support",
+    "heading": "24/7 Support",
+    "paragraph": "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam sed faucib turpis eu gravida mi. Pellentesque et velit aliquam sed mi."
+  },
+  {
+    "additionalClasses": "benefit-card--white-bg",
+    "iconId": "benefits__timer",
+    "heading": "Quick Delivery",
+    "paragraph": "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam sed faucib turpis eu gravida mi. Pellentesque et velit aliquam sed mi."
+  },
+  {
+    "additionalClasses": "benefit-card--white-bg",
+    "iconId": "benefits__document",
+    "heading": "Hands-on approach",
+    "paragraph": "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam sed faucib turpis eu gravida mi. Pellentesque et velit aliquam sed mi."
+  }
+]

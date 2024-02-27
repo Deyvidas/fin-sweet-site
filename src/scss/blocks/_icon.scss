@@ -1,0 +1,36 @@
+.svg-icon {
+    display: flex;
+    align-self: center;
+
+    fill: currentColor;
+
+    &__logo {
+        &--medium {
+            width: 122px;
+            height: 24.71px;
+            min-width: 122px;
+            min-height: 24.71px;
+        }
+
+        &--large {
+            width: 160px;
+            height: 32.41px;
+            min-width: 160px;
+            min-height: 32.41px;
+        }
+    }
+
+    &__arrow-right {
+        width: 25px;
+        height: 12px;
+        min-width: 25px;
+        min-height: 12px;
+    }
+
+    &__benefits {
+        width: 35px;
+        height: 35px;
+        min-width: 35px;
+        min-height: 35px;
+    }
+}

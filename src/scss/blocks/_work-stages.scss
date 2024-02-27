@@ -1,0 +1,17 @@
+.work-stages {
+    padding-block: 130px;
+    background-color: var(--color-white-smoke);
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        row-gap: 25px;
+        column-gap: 48px;
+    }
+}

@@ -1,0 +1,49 @@
+.work-stage-card {
+    display: grid;
+    row-gap: 12px;
+}
+
+.colored-numeration {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    height: 50px;
+    aspect-ratio: 1;
+    border-radius: 8px;
+    background-color: var(--color-blue);
+
+    &__number {
+        z-index: 3;
+        color: var(--color-white);
+        font-style: 18px;
+        font-weight: 500;
+        line-height: calc(32 / 18);
+    }
+
+    &__right-upper-bg {
+        position: absolute;
+        z-index: 2;
+        height: inherit;
+        aspect-ratio: inherit;
+        left: 8px;
+        bottom: 8px;
+
+        border-radius: inherit;
+        background-color: var(--color-purple);
+    }
+
+    &__left-lower-bg {
+        position: absolute;
+        z-index: 1;
+        height: inherit;
+        aspect-ratio: inherit;
+        top: 28px;
+        right: 28px;
+
+        border-radius: inherit;
+        background-color: var(--color-yellow);
+    }
+}

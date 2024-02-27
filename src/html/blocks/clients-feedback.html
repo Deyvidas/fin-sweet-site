@@ -1,0 +1,21 @@
+<section class="clients-feedback">
+    <div class="titled-container">
+        <div class="clients-feedback__heading">
+            <h3 class="heading heading--3 heading--blue-black">
+                What our clients say about us
+            </h3>
+            <p class="paragraph paragraph--dark-blue-opaque">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.
+            </p>
+        </div>
+
+        <div class="clients-feedback__list">
+            @@loop('./feedback-card.html', './../data/feedback-cards.json')
+        </div>
+        
+        <div class="clients-feedback__swiper-arrows">
+            <span class="clients-feedback__previous-arrow">0</span>
+            <span class="clients-feedback__next-arrow">0</span>
+        </div>
+    </div>
+</section>

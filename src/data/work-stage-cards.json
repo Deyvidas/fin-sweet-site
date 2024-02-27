@@ -1,0 +1,22 @@
+[
+  {
+    "cardNumber": "01",
+    "cardTitle": "Strategy",
+    "cardText": "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam."
+  },
+  {
+    "cardNumber": "02",
+    "cardTitle": "Wireframing",
+    "cardText": "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam."
+  },
+  {
+    "cardNumber": "03",
+    "cardTitle": "Design",
+    "cardText": "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam."
+  },
+  {
+    "cardNumber": "04",
+    "cardTitle": "Development",
+    "cardText": "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam."
+  }
+]
