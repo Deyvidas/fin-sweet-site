@@ -34,7 +34,8 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "dotenv": "^16.4.4"
+    "dotenv": "^16.4.4",
+    "swiper": "^11.0.7"
   },
   "browserslist": [
     "last 5 versions"

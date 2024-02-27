@@ -38,5 +38,13 @@
     "editor.rulers": [90]
   },
 
-  "cSpell.words": ["basepath", "csso", "fileinclude", "Finsweet", "htmlmin", "webp"]
+  "cSpell.words": [
+    "basepath",
+    "csso",
+    "fileinclude",
+    "Finsweet",
+    "htmlmin",
+    "swiper",
+    "webp"
+  ]
 }

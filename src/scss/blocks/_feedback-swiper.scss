@@ -1,0 +1,38 @@
+.feedback-swiper {
+    width: 100%;
+    z-index: 0;
+
+    &__buttons {
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        z-index: 1;
+
+        display: flex;
+        column-gap: 11px;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+
+        color: var(--color-white);
+        background-color: var(--color-purple);
+
+        &--prev {
+        }
+
+        &--next {
+        }
+
+        &--disabled {
+            color: var(--color-blue-black-70);
+            background-color: transparent;
+        }
+    }
+}

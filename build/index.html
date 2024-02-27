@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <link rel="shortcut icon" href="./media/icons/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="./css/main.css" />
         <script type="module" src="./js/index.bundle.js" defer></script>
         <title>Finsweet</title>
@@ -82,6 +83,19 @@
                     <path d="M8.3868 13.9615C7.03369 12.8528 5.80826 12.9996 4.24371 12.9996C1.90373 12.9996 0 14.8921 0 17.2177V24.0432C0 25.0532 0.824368 25.8745 1.83811 25.8745C6.21469 25.8745 5.68745 25.9537 5.68745 25.6857C5.68745 20.8491 5.11458 17.3022 8.3868 13.9615Z" />
                     <path d="M17.4882 13.0249C14.7555 12.797 12.3802 13.0275 10.3314 14.7187C6.90288 17.4649 7.56268 21.1625 7.56268 25.6861C7.56268 26.8829 8.53642 27.8748 9.75141 27.8748C22.9439 27.8748 23.469 28.3003 24.2513 26.5679C24.5078 25.9821 24.4375 26.1682 24.4375 20.5636C24.4375 16.112 20.583 13.0249 17.4882 13.0249Z" />
                     <path d="M27.7564 13.0004C26.1833 13.0004 24.9646 12.8552 23.6133 13.9623C26.8611 17.2783 26.3126 20.5832 26.3126 25.6865C26.3126 25.9562 25.8749 25.8753 30.0963 25.8753C31.1463 25.8753 32.0001 25.0247 32.0001 23.9791V17.2185C32.0001 14.8929 30.0963 13.0004 27.7564 13.0004Z" />
+                </g>
+            </symbol>
+
+            <!-- * swiper-icons * -->
+            <symbol id="swiper__button-next" viewBox="0 0 24 24">
+                <g>
+                    <path d="M8.586 5.586c-.781.781-.781 2.047 0 2.828l3.585 3.586-3.585 3.586c-.781.781-.781 2.047 0 2.828.39.391.902.586 1.414.586s1.024-.195 1.414-.586l6.415-6.414-6.415-6.414c-.78-.781-2.048-.781-2.828 0z" />
+                </g>
+            </symbol>
+
+            <symbol id="swiper__button-prev" viewBox="0 0 24 24">
+                <g>
+                    <path d="M14.414 5.586c-.78-.781-2.048-.781-2.828 0l-6.415 6.414 6.415 6.414c.39.391.902.586 1.414.586s1.024-.195 1.414-.586c.781-.781.781-2.047 0-2.828l-3.585-3.586 3.585-3.586c.781-.781.781-2.047 0-2.828z" />
                 </g>
             </symbol>
 
@@ -322,49 +336,60 @@
                     <h3 class="heading heading--3 heading--blue-black">What our clients say about us</h3>
                     <p class="paragraph paragraph--dark-blue-opaque">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.</p>
                 </div>
+                <div class="swiper feedback-swiper">
+                    <div class="swiper-wrapper feedback-swiper__wrapper">
+                        <div class="swiper-slide">
+                            <div class="feedback-card">
+                                <div class="feedback-card__content">
+                                    <h5 class="heading heading--5 heading--blue-black">The best agency we’ve worked with so far. They understand our product and are able to add new features with a great focus.</h5>
+                                </div>
+                                <div class="feedback-card__footer">
+                                    <div class="user-profile">
+                                        <img class="user-profile__image" draggable="false" src="./media/images/clients-feedback/avatar-01@3x.jpg" alt="Avatar 1" />
+                                        <p class="user-profile__user-name">Jenny Wilson</p>
+                                        <span class="user-profile__user-role">Vice President</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="feedback-card">
+                                <div class="feedback-card__content">
+                                    <h5 class="heading heading--5 heading--blue-black">The best agency we’ve worked with so far. They understand our product and are able to add new features with a great focus.</h5>
+                                </div>
+                                <div class="feedback-card__footer">
+                                    <div class="user-profile">
+                                        <img class="user-profile__image" draggable="false" src="./media/images/clients-feedback/avatar-02.jpg" alt="Avatar 1" />
+                                        <p class="user-profile__user-name">Morgan Freeman</p>
+                                        <span class="user-profile__user-role">Visitor</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="feedback-card">
+                                <div class="feedback-card__content">
+                                    <h5 class="heading heading--5 heading--blue-black">The best agency we’ve worked with so far. They understand our product and are able to add new features with a great focus.</h5>
+                                </div>
+                                <div class="feedback-card__footer">
+                                    <div class="user-profile">
+                                        <img class="user-profile__image" draggable="false" src="./media/images/clients-feedback/avatar-03.jpeg" alt="Avatar 1" />
+                                        <p class="user-profile__user-name">Keira Knightley</p>
+                                        <span class="user-profile__user-role">Investor</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="clients-feedback__list">
-                    <div class="feedback-card">
-                        <div class="feedback-card__content">
-                            <h5 class="heading heading--5 heading--blue-black">The best agency we’ve worked with so far. They understand our product and are able to add new features with a great focus.</h5>
+                    <div class="feedback-swiper__buttons">
+                        <div class="feedback-swiper__button feedback-swiper__button--prev">
+                            <svg class="svg-icon svg-icon__swiper"><use href="#swiper__button-prev"></use></svg>
                         </div>
-                        <div class="feedback-card__footer">
-                            <div class="user-profile">
-                                <img class="user-profile__image" draggable="false" src="./media/images/clients-feedback/avatar-01@3x.jpg" alt="Avatar 1" />
-                                <p class="user-profile__user-name">Jenny Wilson</p>
-                                <span class="user-profile__user-role">Vice President</span>
-                            </div>
+                        <div class="feedback-swiper__button feedback-swiper__button--next">
+                            <svg class="svg-icon svg-icon__swiper"><use href="#swiper__button-next"></use></svg>
                         </div>
                     </div>
-                    <div class="feedback-card">
-                        <div class="feedback-card__content">
-                            <h5 class="heading heading--5 heading--blue-black">The best agency we’ve worked with so far. They understand our product and are able to add new features with a great focus.</h5>
-                        </div>
-                        <div class="feedback-card__footer">
-                            <div class="user-profile">
-                                <img class="user-profile__image" draggable="false" src="./media/images/clients-feedback/avatar-02.jpg" alt="Avatar 1" />
-                                <p class="user-profile__user-name">Morgan Freeman</p>
-                                <span class="user-profile__user-role">Visitor</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="feedback-card">
-                        <div class="feedback-card__content">
-                            <h5 class="heading heading--5 heading--blue-black">The best agency we’ve worked with so far. They understand our product and are able to add new features with a great focus.</h5>
-                        </div>
-                        <div class="feedback-card__footer">
-                            <div class="user-profile">
-                                <img class="user-profile__image" draggable="false" src="./media/images/clients-feedback/avatar-03.jpeg" alt="Avatar 1" />
-                                <p class="user-profile__user-name">Keira Knightley</p>
-                                <span class="user-profile__user-role">Investor</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="clients-feedback__swiper-arrows">
-                    <span class="clients-feedback__previous-arrow">0</span>
-                    <span class="clients-feedback__next-arrow">0</span>
                 </div>
             </div>
         </section>

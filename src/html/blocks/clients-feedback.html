@@ -8,14 +8,6 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.
             </p>
         </div>
-
-        <div class="clients-feedback__list">
-            @@loop('./feedback-card.html', './../data/feedback-cards.json')
-        </div>
-        
-        <div class="clients-feedback__swiper-arrows">
-            <span class="clients-feedback__previous-arrow">0</span>
-            <span class="clients-feedback__next-arrow">0</span>
-        </div>
+        @@include('./feedback-swiper.html')
     </div>
 </section>
