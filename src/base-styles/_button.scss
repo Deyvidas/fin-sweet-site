@@ -1,4 +1,9 @@
 .button {
+    ---text-color: var(--color-white);
+    ---text-color-hover: var(--color-gray-dark);
+    ---background-color: var(--color-blue-black);
+    ---background-color-hover: var(--color-gray-dark);
+
     display: inline-block;
     padding-block: 16px;
     padding-inline: 78px;
@@ -10,28 +15,47 @@
     font-size: 18px;
     line-height: calc(32 / 18);
     text-align: center;
-    color: var(--color-white);
+    color: var(---text-color);
 
-    background-color: var(--color-blue-black);
+    background-color: var(---background-color);
     transition-duration: var(--transition-duration);
     border: none;
 
-    &:hover {
-        background-color: var(--color-gray-dark);
+    &:focus-visible {
+        outline: 1px solid var(---background-color);
+        outline-offset: 5px;
     }
 
-    &--yellow {
-        padding-inline: 56px;
+    &:hover {
+        color: var(---text-color-hover);
+        background-color: var(---background-color-hover);
+    }
 
-        color: var(--text-color);
-        background-color: var(--color-yellow);
+    &[type="submit"] {
+        color: var(---text-color);
+        background-color: var(---background-color);
 
         &:hover {
-            background-color: var(--color-yellow-pale);
+            color: var(---text-color-hover);
+            background-color: var(---background-color-hover);
         }
     }
 
+    &--yellow {
+        ---text-color: var(--text-color);
+        ---text-color-hover: var(--text-color);
+        ---background-color: var(--color-yellow);
+        ---background-color-hover: var(--color-yellow-pale);
+
+        padding-inline: 56px;
+    }
+
     &--transparent {
+        ---text-color: var(--color-white);
+        ---text-color-hover: var(--color-gray);
+        ---background-color: transparent;
+        ---background-color-hover: transparent;
+
         padding-block: 16px;
         padding-inline: 48px;
 
@@ -39,14 +63,14 @@
         font-size: 16px;
         font-weight: 500;
         line-height: calc(28 / 16);
-        color: var(--color-white);
+        color: var(---text-color);
 
-        background-color: transparent;
+        background-color: var(---background-color);
         border: 2px solid var(--color-white-20);
 
         &:hover {
-            background-color: transparent;
-            color: var(--color-gray);
+            color: var(---text-color-hover);
+            background-color: var(---background-color-hover);
         }
     }
 }

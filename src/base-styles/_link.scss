@@ -1,77 +1,61 @@
 .link {
+    ---text-color: var(--color-blue);
+    ---text-color-hover: var(--color-blue-dark);
+    ---text-color-active: red;
+
     display: flex;
     white-space: nowrap;
     font-size: 16px;
     font-weight: 500;
     line-height: calc(28 / 16);
     transition-duration: var(--transition-duration);
+    user-select: none;
+    color: var(---text-color);
 
     &:focus-visible {
         outline: 1px solid currentColor;
     }
 
-    &--gray {
-        color: var(--color-gray);
-
-        &[class*="active"] {
-            color: var(--color-white);
-        }
-
-        &:hover {
-            color: var(--color-gray-light);
-        }
+    &[class*="active"] {
+        color: var(---text-color-active);
     }
 
-    &--white {
-        color: var(--color-white);
-
-        &[class*="active"] {
-            color: red;
-        }
-
-        &:hover {
-            color: var(--color-gray-dark);
-        }
-    }
-
-    &--blue {
-        color: var(--color-blue);
-
-        &[class*="active"] {
-            color: red;
-        }
-
-        &:hover {
-            color: var(--color-blue-black);
-        }
-    }
-
-    &--blue-black {
-        color: var(--text-color);
-
-        &[class*="active"] {
-            color: red;
-        }
-
-        &:hover {
-            color: var(--color-blue-dark);
-        }
-    }
-
-    &--yellow {
-        color: var(--color-yellow);
-
-        &[class*="active"] {
-            color: red;
-        }
-
-        &:hover {
-            color: var(--color-blue-dark);
-        }
+    &:hover {
+        color: var(---text-color-hover);
     }
 
     &--with-icon {
         display: flex;
         column-gap: 16px;
+    }
+
+    &--gray {
+        ---text-color: var(--color-gray);
+        ---text-color-hover: var(--color-gray-light);
+        ---text-color-active: var(--color-white);
+    }
+
+    &--white {
+        ---text-color: var(--color-white);
+        ---text-color-hover: var(--color-gray-dark);
+        ---text-color-active: red;
+    }
+
+    &--blue {
+        ---text-color: var(--color-blue);
+        ---text-color-hover: var(--color-blue-dark);
+        ---text-color-active: red;
+    }
+
+    &--blue-black {
+        ---text-color: var(--text-color);
+        ---text-color-hover: var(--color-blue-dark);
+        ---text-color-active: red;
+    }
+
+    &--yellow {
+        ---text-color: var(--color-yellow);
+        ---text-color-hover: var(--color-blue-dark);
+        ---text-color-active: red;
     }
 }
