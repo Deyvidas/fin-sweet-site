@@ -1,47 +1,12 @@
 <section class="faq-section">
     <div class="titled-container">
         <div class="faq-section__heading">
-            <h3 class="heading heading--3">
-                Frequently asked questions
-            </h3>
-            <a class="link link--blue" href="#!">
-                Contact us for more info
-            </a>
+            <h3 class="heading heading--3">Frequently asked questions</h3>
+            <a class="link link--blue" href="#!">Contact us for more info</a>
         </div>
 
         <div class="faq-section__content">
-
-            <div class="faq-card">
-                <h6 class="faq-card__number heading heading--6 heading--blue">
-                    01
-                </h6>
-                <h6 class="faq-card__question heading heading--6">
-                    How much time does it take?
-                </h6>
-                <button class="faq-card__button">
-                    0
-                </button>
-
-                <p class="faq-card__answer">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-            </div>
-
-            <div class="faq-card">
-                <h6 class="faq-card__number heading heading--6 heading--blue">
-                    01
-                </h6>
-                <h6 class="faq-card__question heading heading--6">
-                    How much time does it take?
-                </h6>
-                <button class="faq-card__button">
-                    0
-                </button>
-
-                <p class="faq-card__answer">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-            </div>
+            @@loop('./../faq-card/faq-card.html', './data/faq-cards.json')
         </div>
     </div>
 </section>

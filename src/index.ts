@@ -5,3 +5,7 @@
 // Swiper for users feedback on the homepage.
 import { feedbackSwiper } from './blocks/feedback-swiper/feedback-swiper';
 feedbackSwiper();
+
+// Add accordion for FAQ blocks.
+import { faqCard } from './blocks/faq-card/faq-card';
+faqCard();

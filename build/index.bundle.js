@@ -10,6 +10,16 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/blocks/faq-card/faq-card.ts":
+/*!*****************************************!*\
+  !*** ./src/blocks/faq-card/faq-card.ts ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   faqCard: () => (/* binding */ faqCard)\n/* harmony export */ });\nfunction questionOnClickHandler(event) {\n    const wrapper = this.parentElement;\n    if (!wrapper)\n        throw new Error(`Parent of ${this.className} not found`);\n    wrapper.classList.toggle('faq-card--active');\n    const answer = wrapper.querySelector('.faq-card__answer');\n    if (!answer)\n        throw new Error('The wrapper has no child .faq-card__answer');\n    answer.hidden = !answer.hidden;\n}\nfunction faqCard() {\n    const questions = document.querySelectorAll('.faq-card__heading');\n    for (var question of questions) {\n        question.addEventListener('click', questionOnClickHandler);\n    }\n}\n\n\n\n//# sourceURL=webpack://gulp-html-scss/./src/blocks/faq-card/faq-card.ts?");
+
+/***/ }),
+
 /***/ "./src/blocks/feedback-swiper/feedback-swiper.ts":
 /*!*******************************************************!*\
   !*** ./src/blocks/feedback-swiper/feedback-swiper.ts ***!
@@ -26,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _blocks_feedback_swiper_feedback_swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/feedback-swiper/feedback-swiper */ \"./src/blocks/feedback-swiper/feedback-swiper.ts\");\n// Handle interactions with the menu button.\n// import { MobileNav } from './modules/mobile-nav';\n// MobileNav();\n// Swiper for users feedback on the homepage.\n\n(0,_blocks_feedback_swiper_feedback_swiper__WEBPACK_IMPORTED_MODULE_0__.feedbackSwiper)();\n\n\n//# sourceURL=webpack://gulp-html-scss/./src/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _blocks_feedback_swiper_feedback_swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/feedback-swiper/feedback-swiper */ \"./src/blocks/feedback-swiper/feedback-swiper.ts\");\n/* harmony import */ var _blocks_faq_card_faq_card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/faq-card/faq-card */ \"./src/blocks/faq-card/faq-card.ts\");\n// Handle interactions with the menu button.\n// import { MobileNav } from './modules/mobile-nav';\n// MobileNav();\n// Swiper for users feedback on the homepage.\n\n(0,_blocks_feedback_swiper_feedback_swiper__WEBPACK_IMPORTED_MODULE_0__.feedbackSwiper)();\n// Add accordion for FAQ blocks.\n\n(0,_blocks_faq_card_faq_card__WEBPACK_IMPORTED_MODULE_1__.faqCard)();\n\n\n//# sourceURL=webpack://gulp-html-scss/./src/index.ts?");
 
 /***/ }),
 
