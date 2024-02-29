@@ -1,0 +1,53 @@
+.faq-section {
+    padding-block: 130px;
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+
+        > .faq-card {
+            border-top: 2px solid var(--color-gray-light);
+
+            &:first-child {
+                border-top: none;
+            }
+        }
+    }
+}
+
+.faq-card {
+    display: grid;
+    grid-template-columns: 50px auto 50px;
+    grid-template-areas:
+        "number question button"
+        ". answer .";
+
+    column-gap: 35px;
+    align-items: center;
+
+    &__number {
+        grid-area: number;
+        text-align: center;
+    }
+
+    &__question {
+        padding-block: 16px;
+        grid-area: question;
+    }
+
+    &__button {
+        grid-area: button;
+        height: 100%;
+    }
+
+    &__answer {
+        grid-area: answer;
+    }
+}

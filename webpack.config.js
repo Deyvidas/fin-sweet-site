@@ -8,7 +8,7 @@ const isDev = mode === 'development';
 const webpackConf = {
     mode: isDev ? mode : 'production',
     entry: {
-        index: './src/ts/index.ts',
+        index: './src/index.ts',
     },
     module: {
         rules: [

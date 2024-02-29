@@ -47,6 +47,7 @@ const plumberConfig = { errorHandler: notify.onError() };
 const tasks = {
     includeFiles: `(${mode.toUpperCase()}) | includeFiles`,
     sassCompile: `(${mode.toUpperCase()}) | sassCompile`,
+    minifyImages: `(${mode.toUpperCase()}) | minifyImages`,
     copyMedia: `(${mode.toUpperCase()}) | copyMedia`,
     cleanDist: `(${mode.toUpperCase()}) | cleanDist`,
     compileTS: `(${mode.toUpperCase()}) | compileTS`,
@@ -58,7 +59,7 @@ const tasks = {
  * this file.
  */
 GulpClient.task(tasks.includeFiles, () => {
-    const source = `${rootDir}/html/*.html`;
+    const source = `${rootDir}/*.html`;
     const dest = `${destDir}/`;
 
     var gulp = GulpClient.src(source)
@@ -82,8 +83,8 @@ GulpClient.task(tasks.includeFiles, () => {
  * directory.
  */
 GulpClient.task(tasks.sassCompile, () => {
-    const source = `${rootDir}/scss/*.scss`;
-    const dest = `${destDir}/css/`;
+    const source = `${rootDir}/*.scss`;
+    const dest = `${destDir}/`;
 
     var gulp = GulpClient.src(source, { sourcemaps: isDev })
         .pipe(changed(dest, { hasChanged: compareContents }))
@@ -103,15 +104,13 @@ GulpClient.task(tasks.sassCompile, () => {
 });
 
 /**
- * Generate copies of all media files and the structure in the dist directory, and
- * decrease the weight of any pictures or icons.
+ * Generate copies of all images and reduce the weight of them.
  */
-GulpClient.task(tasks.copyMedia, () => {
-    const source = `${rootDir}/media/**/*`;
-    const dest = `${destDir}/media/`;
+GulpClient.task(tasks.minifyImages, () => {
+    const source = `${rootDir}/media/images/**/*`;
+    const dest = `${destDir}/media/images/`;
 
-    var gulp = GulpClient.src(source) // prettier-ignore
-        .pipe(changed(dest));
+    var gulp = GulpClient.src(source).pipe(changed(dest));
 
     if (isProd) {
         gulp = gulp // prettier-ignore
@@ -122,6 +121,17 @@ GulpClient.task(tasks.copyMedia, () => {
 
     return gulp // prettier-ignore
         .pipe(imagemin({ verbose: true }))
+        .pipe(GulpClient.dest(dest));
+});
+
+/**
+ * Duplicate all media files excluding images.
+ */
+GulpClient.task(tasks.copyMedia, () => {
+    const source = [`${rootDir}/media/**/*`, `!${rootDir}/media/images/**/*`];
+    const dest = `${destDir}/media/`;
+
+    return GulpClient.src(source) // prettier-ignore
         .pipe(GulpClient.dest(dest));
 });
 
@@ -139,8 +149,8 @@ GulpClient.task(tasks.cleanDist, (done) => {
  * Compile all TypeScript files into a JavaScript files.
  */
 GulpClient.task(tasks.compileTS, () => {
-    const source = `${rootDir}/ts/**/*.ts`;
-    const dest = `${destDir}/js/`;
+    const source = `${rootDir}/*.ts`;
+    const dest = `${destDir}/`;
 
     var gulp = GulpClient.src(source)
         .pipe(changed(dest, { hasChanged: compareContents }))
@@ -154,10 +164,14 @@ GulpClient.task(tasks.compileTS, () => {
  * Execute the necessary action after saving the specified file.
  */
 GulpClient.task(tasks.watch, () => {
-    GulpClient.watch(`${rootDir}/scss/**/*.scss`, GulpClient.parallel(tasks.sassCompile));
+    GulpClient.watch(`${rootDir}/**/*.scss`, GulpClient.parallel(tasks.sassCompile));
     GulpClient.watch(`${rootDir}/**/*.html`, GulpClient.parallel(tasks.includeFiles));
-    GulpClient.watch(`${rootDir}/media/**/*`, GulpClient.parallel(tasks.copyMedia));
-    GulpClient.watch(`${rootDir}/ts/**/*.ts`, GulpClient.parallel(tasks.compileTS));
+    GulpClient.watch(`${rootDir}/**/*.ts`, GulpClient.parallel(tasks.compileTS));
+    GulpClient.watch(`${rootDir}/media/images/**/*`, GulpClient.parallel(tasks.minifyImages)); // prettier-ignore
+    GulpClient.watch(
+        [`${rootDir}/media/**/*`, `!${rootDir}/media/images/**/*`],
+        GulpClient.parallel(tasks.copyMedia),
+    );
 });
 
 /**
@@ -168,6 +182,7 @@ GulpClient.task('default', GulpClient.series(
     GulpClient.parallel(
         tasks.includeFiles,
         tasks.sassCompile,
+        tasks.minifyImages,
         tasks.copyMedia,
         tasks.compileTS
     ),

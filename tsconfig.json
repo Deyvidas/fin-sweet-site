@@ -19,5 +19,5 @@
     "noEmit": false,
     "baseUrl": "./"
   },
-  "include": ["src/ts/**/*"]
+  "include": ["src/blocks/**/*.ts", "src/index.ts"]
 }

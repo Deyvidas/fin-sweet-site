@@ -1,0 +1,17 @@
+.header {
+    background-color: var(--color-blue);
+
+    &__inner {
+        display: flex;
+        column-gap: 32px;
+        padding-block: 16px;
+
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__nav-menu {
+        display: flex;
+        column-gap: 32px;
+    }
+}
