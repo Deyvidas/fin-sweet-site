@@ -1,23 +1,35 @@
 .hero-section {
+    ---background-color: var(--color-blue-dark);
+
     padding-block: 130px;
-    background-color: var(--color-blue);
+    background-color: var(---background-color);
     color: var(--color-white);
 
     &__inner {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 60px;
+        position: relative;
+        overflow: hidden;
+
+        display: flex;
+        align-items: center;
     }
 
     &__content {
+        z-index: 1;
+
         display: flex;
         flex-direction: column;
         row-gap: 48px;
+
+        background: var(---background-color);
+        background: linear-gradient(90deg, var(---background-color) 40%, transparent 100%);
     }
 
     &__text {
         display: grid;
         row-gap: 24px;
+        width: max(50%, 450px);
+
+        text-wrap: balance;
     }
 
     &__links {
@@ -26,14 +38,12 @@
         align-items: center;
     }
 
-    &__illustration {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
     &__image {
-        min-width: 610px;
+        position: absolute;
+        right: 0px;
+        min-width: 700px;
+        height: 100%;
+
         user-select: none;
         -webkit-user-drag: none;
     }
