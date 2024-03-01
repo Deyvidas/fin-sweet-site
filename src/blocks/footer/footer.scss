@@ -1,22 +1,59 @@
 html,
 body {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 .footer {
     margin-top: auto;
-    padding: 50px 0;
+    padding-block: 100px;
 
-    color: #fff;
-    background-color: #3e3e3e;
+    background-color: var(--color-blue-dark);
 
-    h1 {
-        font-size: 32px;
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
     }
 
-    @media (max-width: 1200px) {
-        font-size: 26px;
+    &__top {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 15px;
+        justify-content: space-between;
+    }
+
+    &__nav-menu {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        min-width: 250px;
+
+        * {
+            margin-inline: auto;
+            text-align: center;
+            text-wrap: balance;
+        }
+    }
+
+    &__separator {
+        height: 1px;
+        width: 100%;
+        background-color: var(--color-blue-black);
+    }
+
+    &__bottom {
+        display: flex;
+        column-gap: 15px;
+        align-items: center;
+        justify-content: space-between;
+
+        white-space: nowrap;
     }
 }

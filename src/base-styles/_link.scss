@@ -3,11 +3,13 @@
     ---text-color-hover: var(--color-blue-dark);
     ---text-color-active: red;
 
-    display: flex;
-    white-space: nowrap;
+    width: fit-content;
+
     font-size: 16px;
     font-weight: 500;
     line-height: calc(28 / 16);
+    white-space: nowrap;
+
     transition-duration: var(--transition-duration);
     user-select: none;
     color: var(---text-color);

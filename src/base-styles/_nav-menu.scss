@@ -1,0 +1,25 @@
+.nav-menu {
+    ---flex-direction: row;
+    ---colum-gap: normal;
+    ---row-gap: normal;
+
+    &__links {
+        display: flex;
+        flex-direction: var(---flex-direction);
+        column-gap: var(---colum-gap);
+        row-gap: var(---row-gap);
+    }
+
+    &__link {
+        width: fit-content;
+    }
+
+    &--vertical {
+        ---flex-direction: column;
+        ---row-gap: 10px;
+    }
+
+    &--horizontal {
+        ---colum-gap: 32px;
+    }
+}
