@@ -21,6 +21,7 @@
         transition-duration: var(--transition-duration);
 
         &:hover {
+            column-gap: 20px;
             padding-left: 10px;
             background-color: var(--color-white-smoke);
         }

@@ -1,15 +1,21 @@
 .send-inquiry {
     &__inner {
         position: relative;
-        overflow: hidden;
 
         display: grid;
         grid-template-columns: repeat(2, 50%);
+
+        @media (max-width: 1339px) {
+            position: static;
+            grid-template-columns: auto;
+        }
     }
 
     &__bg,
     picture {
         position: absolute;
+        left: 0px;
+        top: 0px;
         z-index: -1;
 
         height: 100%;
@@ -28,6 +34,10 @@
         padding: 96px;
 
         background-color: var(--color-blue-dark-50);
+
+        @media (max-width: 1339px) {
+            position: relative;
+        }
     }
 
     &__right {

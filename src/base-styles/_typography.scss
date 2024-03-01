@@ -59,10 +59,15 @@
 .paragraph {
     ---text-color: var(--text-color);
 
+    text-wrap: balance;
     font-size: 16px;
     font-weight: normal;
     line-height: calc(28 / 16);
     color: var(---text-color);
+
+    &--text-centered {
+        text-align: center;
+    }
 
     &--dark-blue-opaque {
         ---text-color: var(--color-blue-black-70);

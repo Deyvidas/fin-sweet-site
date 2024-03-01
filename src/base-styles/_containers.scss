@@ -24,4 +24,22 @@
     display: grid;
     grid-template-columns: 332px auto;
     column-gap: 110px;
+
+    @media (max-width: 1049px) {
+        grid-template-columns: 1fr;
+        column-gap: normal;
+        row-gap: 50px;
+    }
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+
+        @media (max-width: 1049px) {
+            align-items: center;
+            text-align: center;
+            text-wrap: balance;
+        }
+    }
 }

@@ -32,14 +32,9 @@ body {
     &__contacts {
         display: flex;
         flex-direction: column;
+        align-items: center;
         row-gap: 20px;
         min-width: 250px;
-
-        * {
-            margin-inline: auto;
-            text-align: center;
-            text-wrap: balance;
-        }
     }
 
     &__separator {
