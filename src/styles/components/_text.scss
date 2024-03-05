@@ -1,0 +1,148 @@
+$text-sizes: (
+    "heading-1": (
+        "font-size": 54px,
+        "font-weight": 600,
+        "line-height": calc(74 / 54),
+    ),
+    "heading-2": (
+        "font-size": 48px,
+        "font-weight": 600,
+        "line-height": calc(64 / 48),
+    ),
+    "heading-3": (
+        "font-size": 38px,
+        "font-weight": 600,
+        "line-height": calc(56 / 38),
+    ),
+    "heading-4": (
+        "font-size": 35px,
+        "font-weight": 500,
+        "line-height": calc(52 / 35),
+    ),
+    "heading-5": (
+        "font-size": 32px,
+        "font-weight": 500,
+        "line-height": calc(48 / 32),
+    ),
+    "heading-6": (
+        "font-size": 24px,
+        "font-weight": 500,
+        "line-height": calc(36 / 24),
+    ),
+
+    "paragraph-1": (
+        "font-size": 16px,
+        "font-weight": 500,
+        "line-height": calc(28 / 16),
+    ),
+    "paragraph-2": (
+        "font-size": 16px,
+        "font-weight": normal,
+        "line-height": calc(28 / 16),
+    ),
+);
+
+@mixin text-sizes() {
+    @each $size, $kwargs in $text-sizes {
+        $size-name: get-name("--", $size);
+
+        &#{$size-name} {
+            --font-size: #{map-get($kwargs, "font-size")};
+            --font-weight: #{map-get($kwargs, "font-weight")};
+            --line-height: #{map-get($kwargs, "line-height")};
+        }
+    }
+}
+
+$text-themes: (
+    "white": (
+        "main": $color-white,
+        "hover": darken($color-white, 30%),
+        "active": lighten($color-white, 30%),
+    ),
+    "white-smoke": (
+        "main": $color-white-smoke,
+        "hover": darken($color-white-smoke, 30%),
+        "active": lighten($color-white-smoke, 30%),
+    ),
+
+    "blue": (
+        "main": $color-blue,
+        "hover": lighten($color-blue, 15%),
+        "active": darken($color-blue, 15%),
+    ),
+    "blue-dark": (
+        "main": $color-blue-dark,
+        "hover": lighten($color-blue-dark, 15%),
+        "active": darken($color-blue-dark, 15%),
+    ),
+    "blue-black": (
+        "main": $color-blue-black,
+        "hover": lighten($color-blue-black, 15%),
+        "active": darken($color-blue-black, 15%),
+    ),
+
+    "gray": (
+        "main": $color-gray,
+        "hover": darken($color-gray, 15%),
+        "active": lighten($color-gray, 30%),
+    ),
+    "gray-light": (
+        "main": $color-gray-light,
+        "hover": darken($color-gray-light, 15%),
+        "active": lighten($color-gray-light, 15%),
+    ),
+    "gray-dark": (
+        "main": $color-gray-dark,
+        "hover": darken($color-gray-dark, 10%),
+        "active": lighten($color-gray-dark, 15%),
+    ),
+
+    "yellow": (
+        "main": $color-yellow,
+        "hover": darken($color-yellow, 15%),
+        "active": darken($color-yellow, 30%),
+    ),
+);
+
+@mixin text-themes($withHover: false, $withActive: false) {
+    @each $theme, $kwargs in $text-themes {
+        $theme-name: get-name("--", $theme);
+        $main-color: map-get($kwargs, "main");
+
+        &#{$theme-name} {
+            color: #{$main-color};
+
+            &.link:hover {
+                color: #{map-get($kwargs, "hover")};
+            }
+
+            &.link--active {
+                color: #{map-get($kwargs, "active")};
+            }
+
+            @for $i from 1 through 9 {
+                &-#{calc($i * 10)} {
+                    color: #{rgba($main-color, calc($i / 10))};
+                }
+            }
+        }
+    }
+}
+
+.text {
+    @include text-sizes();
+    @include text-themes();
+
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    line-height: var(--line-height);
+
+    &--wrap-balance {
+        text-wrap: balance;
+    }
+
+    &--centered {
+        text-align: center;
+    }
+}

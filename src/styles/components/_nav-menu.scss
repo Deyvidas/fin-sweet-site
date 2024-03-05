@@ -1,0 +1,12 @@
+.nav-menu {
+    &__links {
+    }
+
+    &__links-horizontal {
+        @include horizontal-flex(32px);
+    }
+
+    &__links-vertical {
+        @include vertical-flex(10px);
+    }
+}

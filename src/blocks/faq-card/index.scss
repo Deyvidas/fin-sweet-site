@@ -1,0 +1,57 @@
+.faq-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+
+    user-select: none;
+
+    &--active {
+        .faq-card__button {
+            transition-duration: $transition-duration;
+            transform: rotate(45deg);
+        }
+    }
+
+    &__heading {
+        display: flex;
+        column-gap: 25px;
+        padding-block: 16px;
+        align-items: center;
+
+        transition-duration: $transition-duration;
+
+        &:hover {
+            column-gap: 20px;
+            padding-left: 10px;
+            background-color: $color-white-smoke;
+        }
+    }
+
+    &__number {
+        width: 90px;
+        min-width: 90px;
+        height: fit-content;
+
+        text-align: center;
+    }
+
+    &__question {
+        margin-right: auto;
+
+        cursor: pointer;
+    }
+
+    &__button {
+        transition-duration: $transition-duration;
+        transform: rotate(0deg);
+    }
+
+    &__answer {
+        margin-right: 20px;
+        margin-left: calc(90px + 25px);
+        margin-bottom: 32px;
+
+        cursor: text;
+        user-select: text;
+    }
+}

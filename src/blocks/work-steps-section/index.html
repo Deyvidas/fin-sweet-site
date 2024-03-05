@@ -1,0 +1,21 @@
+<section class="work-steps-section">
+    <div class="titled-container">
+        <div class="titled-container__heading">
+            <h2 class="text text--heading-2">
+                How we work
+            </h2>
+            <p class="text text--paragraph-2 text--blue-black-70 text--wrap-balance">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut odio, libero maxime soluta incidunt quae totam ab itaque animi error similique deleniti ipsam possimus ullam, in tempora quo, necessitatibus at.
+                Iusto dignissimos fugiat nam beatae nesciunt magni rerum iure aspernatur mollitia, culpa, provident impedit quis voluptas quibusdam omnis aperiam. Magni, optio commodi.
+            </p>
+            <a class="link link--with-icon text--blue" href="#!">
+                Get in touch with us
+                <svg class="icon icon--arrow-right"><use href="./media/icons/sprite.svg#arrow-right"></use></svg>
+            </a>
+        </div>
+
+        <div class="work-steps-section__cards">
+            @@loop('./../work-step-card/index.html', './data/work-steps-cards.json')
+        </div>
+    </div>
+</section>

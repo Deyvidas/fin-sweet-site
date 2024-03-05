@@ -1,0 +1,72 @@
+$icon-sizes: (
+    "logo-m": (
+        "width": 122px,
+        "height": 24.71px,
+        "fill": currentColor,
+        "stroke": none,
+    ),
+    "logo-l": (
+        "width": 160px,
+        "height": 32.41px,
+        "fill": currentColor,
+        "stroke": none,
+    ),
+    "arrow-right": (
+        "width": 25px,
+        "height": 12px,
+        "fill": currentColor,
+        "stroke": currentColor,
+    ),
+    "benefits": (
+        "width": 35px,
+        "height": 35px,
+        "fill": currentColor,
+        "stroke": none,
+    ),
+    "swiper": (
+        "width": 45px,
+        "height": 45px,
+        "fill": currentColor,
+        "stroke": none,
+    ),
+    "plus": (
+        "width": 24px,
+        "height": 24px,
+        "fill": none,
+        "stroke": currentColor,
+    ),
+    "socials": (
+        "width": 20px,
+        "height": 20px,
+        "fill": currentColor,
+        "stroke": none,
+    ),
+);
+
+@mixin icon-sizes() {
+    @each $name, $kwargs in $icon-sizes {
+        $icon-name: get-name("--", $name);
+
+        &#{$icon-name} {
+            --width: #{map-get($kwargs, "width")};
+            --height: #{map-get($kwargs, "height")};
+            --fill: #{map-get($kwargs, "fill")};
+            --stroke: #{map-get($kwargs, "stroke")};
+        }
+    }
+}
+
+.icon {
+    @include icon-sizes();
+
+    display: flex;
+    align-self: center;
+
+    fill: var(--fill);
+    stroke: var(--stroke);
+
+    width: var(--width);
+    min-width: var(--width);
+    height: var(--height);
+    min-height: var(--height);
+}

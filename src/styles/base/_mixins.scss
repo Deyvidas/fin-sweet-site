@@ -1,0 +1,30 @@
+// Text block with fixed number of rows.
+%fixed-number-of-lines {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@mixin fixed-number-of-lines($lines: 3) {
+    -webkit-line-clamp: $lines;
+    @extend %fixed-number-of-lines;
+}
+
+// Flex containers.
+%horizontal-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+@mixin horizontal-flex($column-gap) {
+    column-gap: $column-gap;
+    @extend %horizontal-flex;
+}
+%vertical-flex {
+    display: flex;
+    flex-direction: column;
+}
+@mixin vertical-flex($row-gap) {
+    row-gap: $row-gap;
+    @extend %vertical-flex;
+}

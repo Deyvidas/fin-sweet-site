@@ -1,0 +1,11 @@
+.work-steps-section {
+    padding-block: 130px;
+    background-color: $color-white-smoke;
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        row-gap: 25px;
+        column-gap: 48px;
+    }
+}

@@ -1,10 +1,5 @@
 {
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
-    "editor.tabSize": 2
-  },
-  "[jsonc]": {
+  "[json][jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
     "editor.tabSize": 2
@@ -14,24 +9,14 @@
     "editor.formatOnSave": false,
     "editor.tabSize": 4
   },
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
-    "editor.tabSize": 4
-  },
-  "[scss]": {
+
+  "[css][scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
     "editor.tabSize": 4
   },
 
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
-    "editor.tabSize": 4,
-    "editor.rulers": [90]
-  },
-  "[javascript]": {
+  "[typescript][javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
     "editor.tabSize": 4,
@@ -44,7 +29,13 @@
     "fileinclude",
     "Finsweet",
     "htmlmin",
+    "kwargs",
     "swiper",
     "webp"
-  ]
+  ],
+
+  // Name: IntelliSense for CSS class names in HTML
+  // Description: CSS class name completion for the HTML class attribute based on the definitions found in your workspace.
+  // VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion
+  "html-css-class-completion.enableEmmetSupport": true
 }

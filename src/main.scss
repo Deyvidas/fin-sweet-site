@@ -1,8 +1,6 @@
-// FONTS
 @import "media/fonts/**/_fonts.scss";
 
-// BASE
-@import "base-styles/*.scss";
+@import "styles/base";
+@import "styles/components";
 
-// BLOCKS
 @import "blocks/**/*.scss";

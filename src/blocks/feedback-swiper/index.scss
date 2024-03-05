@@ -1,0 +1,41 @@
+.feedback-swiper {
+    width: 100%;
+    min-width: 550px;
+    height: 100%;
+
+    &__buttons {
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        z-index: 1;
+
+        display: flex;
+        column-gap: 11px;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+
+        color: $color-white;
+        background-color: $color-purple;
+        cursor: pointer;
+
+        &--prev {
+        }
+
+        &--next {
+        }
+
+        &--disabled {
+            color: #{rgba($color-blue-black, 0.7)};
+            background-color: transparent;
+            cursor: default;
+        }
+    }
+}

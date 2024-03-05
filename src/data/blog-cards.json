@@ -4,8 +4,8 @@
     "imageAlt": "Blog 04",
     "pubDateISO": "2022-02-01",
     "pubDateShow": "01 Feb 2022",
-    "title": "How one Webflow user grew his single person consultancy from $0-100K in 14 months",
-    "paragraph": "See how pivoting to Webflow changed one person’s sales strategy and allowed him to attract",
+    "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et error, corrupti similique nam exercitationem, tempora recusandae quod vero doloribus.",
+    "paragraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et error, corrupti similique nam exercitationem, tempora recusandae quod vero doloribus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et error, corrupti similique nam exercitationem, tempora recusandae quod vero doloribus.",
     "linkHref": "#!",
     "linkText": "Read More"
   },
@@ -14,8 +14,8 @@
     "imageAlt": "Blog 03",
     "pubDateISO": "2022-01-23",
     "pubDateShow": "23 Jan 2022",
-    "title": "How one Webflow user grew his single person consultancy from $0-100K in 14 months",
-    "paragraph": "See how pivoting to Webflow changed one person’s sales strategy and allowed him to attract",
+    "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, dolore!",
+    "paragraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto at eligendi sed ex perspiciatis rem explicabo libero, unde beatae dolorum ut, dolorem consectetur repellendus enim, aperiam sequi numquam fugiat iure.",
     "linkHref": "#!",
     "linkText": "Read More"
   },
@@ -24,8 +24,8 @@
     "imageAlt": "Blog 02",
     "pubDateISO": "2022-01-20",
     "pubDateShow": "20 Jan 2022",
-    "title": "How one Webflow user grew his single person consultancy from $0-100K in 14 months",
-    "paragraph": "See how pivoting to Webflow changed one person’s sales strategy and allowed him to attract",
+    "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium at accusantium architecto iure in impedit.",
+    "paragraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto at eligendi sed ex perspiciatis rem explicabo libero.",
     "linkHref": "#!",
     "linkText": "Read More"
   },
@@ -34,8 +34,28 @@
     "imageAlt": "Blog 01",
     "pubDateISO": "2022-01-19",
     "pubDateShow": "19 Jan 2022",
-    "title": "How one Webflow user grew his single person consultancy from $0-100K in 14 months",
-    "paragraph": "See how pivoting to Webflow changed one person’s sales strategy and allowed him to attract",
+    "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur quis molestias obcaecati, accusantium provident nisi recusandae ipsam eveniet eius enim!",
+    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae ex consectetur placeat earum eum? Suscipit totam minima amet nobis exercitationem, quo sunt sapiente inventore libero delectus atque, unde ex labore.",
+    "linkHref": "#!",
+    "linkText": "Read More"
+  },
+  {
+    "imagePath": "./media/images/blogs/03.jpg",
+    "imageAlt": "Blog 01",
+    "pubDateISO": "2022-01-15",
+    "pubDateShow": "15 Jan 2022",
+    "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur quis molestias obcaecati, accusantium provident nisi recusandae ipsam eveniet eius enim!",
+    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae ex consectetur placeat earum eum? Suscipit totam minima amet nobis exercitationem, quo sunt sapiente inventore libero delectus atque, unde ex labore.",
+    "linkHref": "#!",
+    "linkText": "Read More"
+  },
+  {
+    "imagePath": "./media/images/blogs/04.jpg",
+    "imageAlt": "Blog 01",
+    "pubDateISO": "2022-01-09",
+    "pubDateShow": "09 Jan 2022",
+    "title": "Lorem ipsum dolor sit.",
+    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae ex consectetur placeat earum eum? Suscipit totam minima amet nobis exercitationem, quo sunt sapiente inventore libero delectus atque, unde ex labore.",
     "linkHref": "#!",
     "linkText": "Read More"
   }

@@ -1,0 +1,54 @@
+html,
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    margin-top: auto;
+    padding-block: 100px;
+
+    background-color: $color-blue-dark;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+    }
+
+    &__top {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 15px;
+        justify-content: space-between;
+    }
+
+    &__nav-menu {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+        min-width: 250px;
+    }
+
+    &__separator {
+        height: 1px;
+        width: 100%;
+        background-color: $color-blue-black;
+    }
+
+    &__bottom {
+        display: flex;
+        column-gap: 15px;
+        align-items: center;
+        justify-content: space-between;
+
+        white-space: nowrap;
+    }
+}

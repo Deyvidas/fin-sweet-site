@@ -1,0 +1,14 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $page-bg;
+    color: $text-color;
+    font-family: $font-main;
+
+    &.dark {
+        background-color: darken($page-bg, 50%);
+        color: lighten($text-color, 50%);
+    }
+}

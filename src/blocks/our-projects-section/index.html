@@ -1,0 +1,46 @@
+<section class="our-projects-section">
+    <div class="container">
+        <div class="our-projects-section__inner">
+
+            <div class="our-projects-section__header">
+                <h2 class="text text--heading-2">
+                    View our projects
+                </h2>
+                <a href="#!" class="link link--with-icon text--blue-black">
+                    View More
+                    <svg class="icon icon--arrow-right"><use href="./media/icons/sprite.svg#arrow-right"></use></svg>
+                </a>
+            </div>
+
+            <div class="our-projects-section__list">
+                <div class="our-projects-section__item our-projects-section__item--main">
+                    @@include('./../our-projects-card/index.html', {
+                        bgPath: './media/images/projects/01@3x.jpg',
+                        bgAlt: 'Project 1',
+                        heading: 'Workhub office Webflow Webflow Design',
+                        paragraph: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque maxime modi explicabo quod provident fuga suscipit et deserunt amet harum aspernatur ipsum iusto earum molestiae, iure tempore laborum ex inventore? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt reprehenderit, qui dolore, ipsum placeat quae numquam.',
+                        linkHref: '#!',
+                    })
+                </div>
+                <div class="our-projects-section__item">
+                    @@include('./../our-projects-card/index.html', {
+                        bgPath: './media/images/projects/02@3x.jpg',
+                        bgAlt: 'Project 2',
+                        heading: 'Unisaas Website Design',
+                        paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere accusantium ut quos, explicabo neque officia non harum hic cupiditate dolor quibusdam ipsam nesciunt?',
+                        linkHref: '#!',
+                    })
+                </div>
+                <div class="our-projects-section__item">
+                    @@include('./../our-projects-card/index.html', {
+                        bgPath: './media/images/projects/03@3x.jpg',
+                        bgAlt: 'Project 3',
+                        heading: 'Saint Valentine church Website Design',
+                        paragraph: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque maxime modi explicabo quod provident fuga suscipit et deserunt amet harum aspernatur ipsum iusto earum molestiae, iure tempore laborum ex inventore?',
+                        linkHref: '#!',
+                    })
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

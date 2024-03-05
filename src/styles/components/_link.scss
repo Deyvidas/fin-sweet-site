@@ -1,0 +1,19 @@
+.link {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: calc(28 / 16);
+
+    white-space: nowrap;
+
+    transition-duration: $transition-duration;
+    user-select: none;
+
+    &:focus-visible {
+        outline: 1px solid currentColor;
+    }
+
+    &--with-icon {
+        display: flex;
+        column-gap: 16px;
+    }
+}

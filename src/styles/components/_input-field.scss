@@ -1,0 +1,71 @@
+$input-themes: (
+    "": (
+        "border-color": rgba($color-purple, 0.3),
+        "legend-text-color": $color-purple,
+        "input-text-color": $color-purple,
+        "placeholder-text-color": rgba($color-purple, 0.3),
+    ),
+    "blue": (
+        "border-color": rgba($color-blue-black, 0.3),
+        "legend-text-color": $color-blue-black,
+        "input-text-color": $color-blue-black,
+        "placeholder-text-color": rgba($color-blue-black, 0.3),
+    ),
+    "white": (
+        "border-color": rgba($color-white, 0.2),
+        "legend-text-color": $color-white,
+        "input-text-color": $color-white,
+        "placeholder-text-color": rgba($color-white, 0.2),
+    ),
+);
+
+@mixin input-themes() {
+    @each $theme, $kwargs in $input-themes {
+        $theme-name: get-name("--", $theme, "-theme");
+
+        &#{$theme-name} {
+            --border-color: #{map-get($kwargs, "border-color")};
+            --legend-text-color: #{map-get($kwargs, "legend-text-color")};
+            --input-text-color: #{map-get($kwargs, "input-text-color")};
+            --placeholder-text-color: #{map-get($kwargs, "placeholder-text-color")};
+        }
+    }
+}
+
+.input-field {
+    @include input-themes();
+
+    padding-inline: 1.25em;
+    width: 100%;
+
+    border-radius: 0.5em;
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: var(--border-color);
+
+    font-size: 16px;
+    font-weight: normal;
+    line-height: calc(28 / 16);
+
+    &__legend {
+        line-height: 0;
+        padding-inline: 0.35em;
+        white-space: nowrap;
+        user-select: none;
+        color: var(--legend-text-color);
+    }
+
+    &__input-text,
+    &__text-area {
+        margin-block: 1.25em;
+        width: 100%;
+        resize: none;
+
+        color: var(--input-text-color);
+
+        &::placeholder {
+            opacity: 1;
+            color: var(--placeholder-text-color);
+        }
+    }
+}

@@ -1,0 +1,13 @@
+<div class="feedback-card">
+    <div class="feedback-card__content">
+        <h5 class="text text--heading-5">@@text</h5>
+    </div>
+    <div class="feedback-card__footer">
+        @@include('./../user-profile/index.html', {
+            avatarPath: "@@avatarPath",
+            avatarAlt: "@@avatarAlt",
+            name: "@@name",
+            role: "@@role",
+        })
+    </div>
+</div>

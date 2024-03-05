@@ -1,0 +1,85 @@
+$button-themes: (
+    "": (
+        "text-color": $text-color,
+        "text-color-hover": darken($text-color, 20%),
+        "bg-color": $page-bg,
+        "bg-color-hover": lighten($page-bg, 20%),
+        "border-color": none,
+        "border-color-hover": none,
+    ),
+    "yellow": (
+        "text-color": $text-color,
+        "text-color-hover": darken($text-color, 20%),
+        "bg-color": $color-yellow,
+        "bg-color-hover": lighten($color-yellow, 10%),
+        "border-color": none,
+        "border-color-hover": none,
+    ),
+    "transparent": (
+        "text-color": $color-white,
+        "text-color-hover": $color-gray,
+        "bg-color": none,
+        "bg-color-hover": none,
+        "border-color": rgba($color-white-smoke, 0.2),
+        "border-color-hover": rgba($color-white-smoke, 0.1),
+    ),
+);
+
+@mixin button-themes() {
+    @each $theme, $kwargs in $button-themes {
+        $theme-name: get-name("--", $theme);
+        $border-color: map-get($kwargs, "border-color");
+        $bg-color: map-get($kwargs, "bg-color");
+
+        &#{$theme-name} {
+            --text-color: #{map-get($kwargs, "text-color")};
+            --text-color-hover: #{map-get($kwargs, "text-color-hover")};
+            --bg-color: #{map-get($kwargs, "bg-color")};
+            --bg-color-hover: #{map-get($kwargs, "bg-color-hover")};
+            --border: none;
+            --border-color-hover: #{map-get($kwargs, "border-color-hover")};
+            --outline-color: #{$bg-color};
+
+            @if ($border-color != none) {
+                --border: 2px solid #{$border-color};
+            }
+            @if ($bg-color == none) {
+                --outline-color: #{$border-color};
+            }
+        }
+    }
+}
+
+.button {
+    @include button-themes();
+
+    display: inline-block;
+    padding-block: 1em;
+    padding-inline: 3em;
+    transition-duration: $transition-duration;
+    user-select: none;
+    cursor: pointer;
+
+    color: var(--text-color);
+    background-color: var(--bg-color);
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: calc(32 / 18);
+    text-align: center;
+    white-space: nowrap;
+
+    border: var(--border);
+    border-radius: 2em;
+
+    &:focus-visible {
+        outline: 1px solid var(--outline-color);
+        outline-offset: 5px;
+    }
+
+    &:hover {
+        color: var(--text-color-hover);
+        background-color: var(--bg-color-hover);
+        border-color: var(--border-color-hover);
+    }
+}

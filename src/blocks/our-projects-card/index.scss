@@ -1,0 +1,33 @@
+.our-projects-card {
+    position: relative;
+    height: 100%;
+
+    &__background {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+
+        user-select: none;
+    }
+
+    &__info {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        row-gap: 10px;
+        padding: 35px;
+        height: 100%;
+        width: min(100%, 405px);
+
+        background: $color-blue-dark;
+        background: linear-gradient(350deg, $color-blue-dark 0%, rgba($color-blue-dark, 0.5) 100%);
+    }
+
+    &__description {
+        @include fixed-number-of-lines(3);
+    }
+}
